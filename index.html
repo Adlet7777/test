@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Board Portal — АО «Центр цифрового развития НБК»</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand">
+          <div class="brand-mark">DDC</div>
+          <div>
+            <h1>Board Portal</h1>
+            <p>АО «ЦЦР НБК»</p>
+          </div>
+        </div>
+        <nav id="side-nav"></nav>
+      </aside>
+
+      <main class="main-area">
+        <header class="topbar">
+          <button class="ghost mobile-menu" id="mobile-menu-btn">☰</button>
+          <div class="global-search">
+            <input id="global-search" type="search" placeholder="Глобальный поиск: документы, заседания, комитеты..." />
+            <div class="search-results hidden" id="global-search-results"></div>
+          </div>
+
+          <div class="topbar-actions">
+            <div class="role-switcher">
+              <label for="role-select">Роль</label>
+              <select id="role-select"></select>
+            </div>
+            <div class="role-switcher">
+              <label for="user-select">Пользователь</label>
+              <select id="user-select"></select>
+            </div>
+            <div class="notification-wrap">
+              <button class="ghost" id="notifications-btn">🔔 <span id="notif-count"></span></button>
+              <div class="notification-dropdown hidden" id="notification-dropdown"></div>
+            </div>
+          </div>
+        </header>
+
+        <section class="content" id="app-content"></section>
+      </main>
+    </div>
+
+    <div id="modal-root"></div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
